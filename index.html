@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+
+<body>
+  <div class="card">
+    
+    
+
+    <div class="weather">
+        <div>
+            <p class="city"></p>
+            <p class="city">City</p>
+        </div>
+        <div>
+            <p class="temp"></p>
+            <p class="temp">Temperatur</p>
+        </div>
+        <div>
+            <p class="humidity"></p>
+            <p class="humidity">Humidity </p>
+        </div>
+        <div>
+            <p class="wind"></p>
+            <p class="wind speed">Wind Speed</p>
+        </div>
+    </div>
+  </div>
+  <script>
+    const data = [
+    {
+      city: 'New York',
+      weather: 'cloudy',
+      temp: '35',
+      humidity: 60,
+      wind: 5 
+    },
+    {
+        city: 'Paris',
+        weather: 'sunny',
+        temp: '40',
+        humidity: 30,
+        wind: 20
+    },
+    {
+        city: 'London',
+        weather: 'rain',
+        temp: '20',
+        humidity: 80,
+        wind: 10
+    },
+    {
+        city: 'Tokyo',
+        weather: 'sunny',
+        temp: '45',
+        humidity: 20,
+        wind: 40
+    },
+  ];
+  console.log(data)
+
+  document.querySelector(".city").innerHTML = data[(Math.floor(Math.random() * data.length))].city
+  document.querySelector(".temp").innerHTML = data[(Math.floor(Math.random() * data.length))].temp
+  document.querySelector(".humidity").innerHTML = data[(Math.floor(Math.random() * data.length))].humidity
+  document.querySelector(".wind").innerHTML = data[(Math.floor(Math.random() * data.length))].wind
+  </script>
+</body>
+
+</html>
